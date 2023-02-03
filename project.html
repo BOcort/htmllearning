@@ -14,9 +14,9 @@
         <div class="header-logo">ILHAM LIE</div>
         <div class="header-list">
           <ul>
-            <li>Tentang Saya</li>
-            <li>Pelajaran</li>
-            <li>Hubungi Saya</li>
+            <li><a href="">Tentang Saya</a> </li>
+            <li><a href="">Pelajaran</a></li>
+            <li><a href="">Hubungi Saya</a></li>
           </ul>
         </div>
         </div>
@@ -37,19 +37,27 @@
         </div>
         <div class="pelajaran">
             <div class="container">
+                
                 <h2 class="heading-lesson">Sampel Project</h2>
-                <div class="lesson">
+                <div class="left-side">
+                    <button class="prev" onclick="nextslide(-1)">&#10094;</button>
+                </div>
+                <div class="lesson" id="bang">
                     <img src="1.png" alt="">
-                    <p>IMAGE 1</p>
+                    <h3>HTML</h3>
                 </div>
-                <div class="lesson">
+                <div class="lesson" id="bang">
                     <img src="2.png" alt="">
-                    <p>IMAGE 2</p>
+                    <h3>CSS</h3>
                 </div>
-                <div class="lesson">
+                <div class="lesson" id="bang">
                     <img src="3.png" alt="">
-                    <p>IMAGE 3</p>
+                    <h3>Javascript</h3>
                 </div>
+                <div class="right-side">
+                    <button class="next" onclick="nextslide(1)">&#10095;</button>
+                </div>
+                
             </div>
         </div>
         <div class="pesan">
@@ -57,14 +65,21 @@
                 <h2 class="heading-lesson">Pesan Untuk Saya</h2>
                 <div class="message">
                     <div class="input-text">
-                        <input type="text" value="    EMAIL (Diperlukan)   ">
+                        <input type="text" class="emailmu" value="    EMAIL (Diperlukan)   ">
                     </div>
                     <div class="input-area">
-                        <input type="form" value="    Message (Diperlukan)   " class="area">
+                        <input type="form" class="message-mu"value="    Message (Diperlukan)   " class="area">
                     </div>
                     <div class="input-button">
-                        <input type="submit" value="KIRIM">
+                        <input type="submit" class="kirimkan" onclick="sending()" value="KIRIM" id="openModalButton">
                     </div>
+                    <div id="myModal">
+                        <div id="modalContent">
+                          <span id="closeModalIcon">&times;</span>
+                          <h2>Pesan Anda</h2>
+                          <div class="hasil"></div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
@@ -79,5 +94,7 @@
             </div>
         </div>
     </footer>
+    <script src="project.js"></script>
+    <script src="pesan.js"></script>
 </body>
 </html>
